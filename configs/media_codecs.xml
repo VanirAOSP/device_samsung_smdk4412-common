@@ -116,6 +116,7 @@ Only the three quirks included above are recognized at this point:
         <MediaCodec name="OMX.ffmpeg.divx.decoder" type="video/divx"/>
         <MediaCodec name="OMX.ffmpeg.hevc.decoder" type="video/hevc"/>
         <MediaCodec name="OMX.ffmpeg.vtrial.decoder" type="video/ffmpeg"/>
+
     </Decoders>
 
     <Encoders>
