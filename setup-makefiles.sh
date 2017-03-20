@@ -20,6 +20,10 @@ DEVICE_COMMON=smdk4412-common
 DEVICE=${DEVICE:-nodevice}
 VENDOR=samsung
 
+if [ "y$INITIAL_COPYRIGHT_YEAR" '==' "y" ]; then
+    INITIAL_COPYRIGHT_YEAR=2012
+fi
+
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
@@ -37,7 +41,7 @@ fi
 setup_vendor "$DEVICE_COMMON" "$VENDOR" "$CM_ROOT" true
 
 # Copyright headers and common guards
-write_headers "i9300 i9305 n7100 n8000 n8013 n8020 t0lte t0lteatt t0ltetmo i605 l900 r950 i925 n5100 n5110 n5120"
+write_headers "i9300 i9305 n7100 n8000 n8013 n8020 t0lte t0lteatt t0ltetmo t0lteskt t0ltektt i605 l900 r950 i925 n5100 n5110 n5120"
 
 write_makefiles "$MY_DIR"/proprietary-files.txt
 
